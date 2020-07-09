@@ -14,8 +14,22 @@ public class KataTest
   }
 
   @Test
-  public void RomanNumeralfor1isI(){
+  public void RomanNumeral1IsI(){
     assertThat(Kata.numberToRomanNumeral(1), equalTo("I"));
   }
 
+  @Test
+  public void RomanNumeral5iIsV(){
+    assertThat(Kata.numberToRomanNumeral(5),equalTo("V"));
+  }
+
+  @Test
+  public void RomanNumeral10IsX(){
+    assertThat(Kata.numberToRomanNumeral(10),equalTo("X"));
+  }
+
+  @Test
+  public void RomanNumeralLessThan4HasIConcatenated(){
+    assertThat(Kata.numberToRomanNumeral(3),equalTo("III"));
+  }
 }

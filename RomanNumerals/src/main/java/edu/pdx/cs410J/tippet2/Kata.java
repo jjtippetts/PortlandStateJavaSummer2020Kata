@@ -16,6 +16,16 @@ public class Kata {
 
   public static String numberToRomanNumeral(int num)
   {
-    return "I";
+    StringBuilder romanNumeral = new StringBuilder();
+    if(num < 5){
+      for(int i = 0; i < num; ++i){
+        romanNumeral.append("I");
+      }
+      return romanNumeral.toString();
+    }
+    else if(num == 5)
+      return "V";
+    else
+      return "X";
   }
 }
